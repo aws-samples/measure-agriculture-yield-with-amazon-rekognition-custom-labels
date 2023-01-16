@@ -21,11 +21,11 @@ Rekognition Custom Labels lets you manage the ML model training process on the A
 
 ## Prerequisites
 
-To create an agriculture yield measuring model, you first need to prepare a dataset to train the model with. For this post, our dataset is composed of images of fruit. The following images show some examples.
+To create an agriculture yield measuring model, you first need to prepare a dataset to train the model with. For this solution, our dataset is composed of images of fruit. The following images show some examples.
 
 ![Sample Image](/image/ML-2594-image001.png)
 
-You can download the image files from the GitHub repo.
+You can download the image files from the repository.
 
 For this post, we only use a handful of images to showcase the fruit yield use case. You can experiment further with more images.
 
@@ -37,7 +37,45 @@ To prepare your dataset, complete the following steps:
 	
 ![S3 Upload](/image/ML-2594-image003.png)
 
+**Train your model using this dataset.**
 
+## Test the model
+Once your model is ready for use and  in the Running state,complete the following steps:
+
+**Step 1 : Start the model**
+On your model details page, on the **Use model** tab, choose **Start**.
+
+**Step 2 : Test the model**
+When the model is in the Running state, you can use the sample testing script analyzeImage.py in this repository to count the amount of fruit in an image.
+![Start the model](/image/ML-2594-image041.png)
+
+  + Download this script from the repository .
+  + Edit this file to replace the parameter bucket with your bucket name and model with your Amazon Rekognition model ARN.
+
+We use the parameters photo and min_confidence as input for this Python script.
+![Input](/image/ML-2594-image043.png)
+
+You can run this script locally using the AWS Command Line Interface (AWS CLI) or using AWS CloudShell. In our example, we ran the script via the CloudShell console. Note that CloudShell is free to use.
+
+Make sure to install the required dependences using the command pip3 install boto3 PILLOW if not already installed.
+![AWS CloudShell](/image/ML-2594-image045.png)
+
+
+ + Upload the file analyzeImage.py to CloudShell using the Actions menu.
+
+![AWS CloudShell](/image/ML-2594-image047.png)
+
+
+The following screenshot shows the output, which detected two fruits in the input image. We supplied 15.jpeg as the photo argument and 85 as the min_confidence value.
+
+![Confidence](/image/ML-2594-image049-cropped.png)
+
+The following example shows image 15.jpeg with two bounding boxes.
+
+![Confidence](/image/ML-2594-image051.png)
+
+**Step 3:  Stop the model**
+When you’re done, remember to stop model to avoid incurring in unnecessary charges. On your model details page, on the Use model tab, choose Stop.
 
 ## Clean up
 
