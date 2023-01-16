@@ -38,9 +38,10 @@ To prepare your dataset, complete the following steps:
 ![S3 Upload](/image/ML-2594-image003.png)
 
 
-Clean up
 
-To avoid incurring unnecessary charges, delete the resources used in this walkthrough when not in use. We need to delete the Amazon Rekognition project and the S3 bucket.
+## Clean up
+
+To avoid incurring unnecessary charges, delete the resources used in this solution when not in use. We need to delete the Amazon Rekognition project and the S3 bucket.
  + Delete the Amazon Rekognition project
  + Delete your S3 bucket.You first need to empty the bucket and then delete it.
 
