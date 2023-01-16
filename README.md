@@ -27,7 +27,7 @@ To create an agriculture yield measuring model, you first need to prepare a data
 
 You can download the image files from the repository.
 
-For this post, we only use a handful of images to showcase the fruit yield use case. You can experiment further with more images.
+For this solution, we only use a handful of images to showcase the fruit yield use case. You can experiment further with more images.
 
 To prepare your dataset, complete the following steps:
 
@@ -40,7 +40,9 @@ To prepare your dataset, complete the following steps:
 **Train your model using this dataset.**
 
 ## Test the model
-Once your model is ready for use and  in the Running state,complete the following steps:
+**analyzeImage.py** can be used in this repository to count the amount of fruit in an image
+
+Once your model is ready for use and in the Running state,complete the following steps:
 
 **Step 1 : Start the model**
 On your model details page, on the **Use model** tab, choose **Start**.
