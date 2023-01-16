@@ -23,7 +23,7 @@ Rekognition Custom Labels lets you manage the ML model training process on the A
 
 To create an agriculture yield measuring model, you first need to prepare a dataset to train the model with. For this post, our dataset is composed of images of fruit. The following images show some examples.
 
-![Sample Image](/image/ML-2594-image001.ong)
+![Sample Image](/image/ML-2594-image001.png)
 
 You can download the image files from the GitHub repo.
 
